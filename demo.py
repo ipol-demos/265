@@ -5,7 +5,9 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 
-FOLDER = "GaitData"
+script_dir = os.path.dirname(os.path.realpath(__file__))
+FOLDER = os.path.join(script_dir, 'GaitData')
+
 CODE_LIST = [filename.replace(".csv", "") for filename in os.listdir(
     FOLDER) if filename.endswith(".csv")]
 COLUMN_NAMES = {'LAV': 0, 'LAX': 1, 'LAY': 2, 'LAZ': 3, 'LRV': 4, 'LRX': 5, 'LRY': 6, 'LRZ': 7,
